@@ -1,6 +1,8 @@
 ;;;; package.lisp
 
 (defpackage vuenix
-  (:use #:cl #:cepl #:temporal-functions
-	#:varjo-lang #:rtg-math
-	))
+  (:use #:cl
+        #:cepl
+        #:temporal-functions
+        #:varjo-lang
+        #:rtg-math))
