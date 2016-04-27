@@ -13,5 +13,6 @@
                #:cepl.devil)
   :serial t
   :components ((:file "package")
-               (:file "vuenix")))
+               (:file "vuenix")
+               (:file "render-image")))
 
