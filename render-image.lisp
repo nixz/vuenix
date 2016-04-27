@@ -33,20 +33,25 @@
 
 (in-package :vuenix)
 
+;;; ----------------------------------------------------------------------------
 (defparameter *count* 0.0)
 (defparameter *texture* nil)
 (defparameter *v-stream* nil)
 
+;;; ----------------------------------------------------------------------------
 (defun-g tex-vert ((vert g-pt))
   (values (v! (pos vert) 1)
           (:smooth (tex vert))))
 
+;;; ----------------------------------------------------------------------------
 (defun-g tex-frag ((tex-coord :vec2) &uniform (texture :sampler-2d)
                    (count :float) (pos-offset :vec4))
   (texture texture tex-coord))
 
+;;; ----------------------------------------------------------------------------
 (defpipeline ripple-with-wobble () (g-> #'tex-vert #'tex-frag))
 
+;;; ----------------------------------------------------------------------------
 (defun step-demo ()
   (step-host)
   (update-repl-link)
@@ -56,6 +61,7 @@
   (incf *count* 0.08)
   (swap))
 
+;;; ----------------------------------------------------------------------------
 (let ((running nil))
   (defun run-loop ()
     (setf running t)
