@@ -31,5 +31,5 @@
 ;;;; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;;;; ==========================================================================
 
-(in-package :vuenix)
+(ql:quickload :vuenix)
 (lfarm-server:start-server "127.0.0.1" 11111 :background t)
