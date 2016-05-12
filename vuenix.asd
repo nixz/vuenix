@@ -10,7 +10,9 @@
                #:swank
                #:livesupport
                #:cepl.skitter.sdl2
-               #:cepl.devil)
+               #:cepl.devil
+               #:lfarm-server
+               #:lfarm-client)
   :serial t
   :components ((:file "package")
                (:file "vuenix")
