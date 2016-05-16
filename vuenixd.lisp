@@ -33,3 +33,8 @@
 
 (ql:quickload :vuenix)
 (vuenix:repl-server)
+(defun start (&key port width height)
+  "to start vuenix"
+  (let ((window (glop:create-window "VUENix" width height :fullscreen t)))
+    (lfarm-server:start-server "127.0.0.1" 11111 :background t)
+    (glop:close-window window)))
