@@ -5,4 +5,6 @@
         #:cepl
         #:temporal-functions
         #:varjo-lang
-        #:rtg-math))
+        #:rtg-math
+        #:sb-bsd-sockets)
+  (:export #:repl-server))
