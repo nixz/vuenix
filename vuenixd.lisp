@@ -36,6 +36,9 @@
 (defun start (&key port width height)
   "to start vuenix"
   (let ((window (glop:create-window "VUENix" width height :fullscreen t)))
-    (glop:dispatch-events window :blocking nil) 
-    (lfarm-server:start-server "127.0.0.1" port :background t)
+    (gl:clear-color 0.3 0.3 1.0 0)
+    (glop:dispatch-events window :blocking nil)
+    (gl:clear :color-buffer)
+    (glop:swap-buffers window)
+    (lfarm-server:start-server "127.0.0.1" port :background nil)
     (glop:close-window window)))
