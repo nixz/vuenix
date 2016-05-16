@@ -13,7 +13,8 @@
                #:cepl.devil
                #:sb-bsd-sockets
                #:lfarm-server
-               #:lfarm-client)
+               #:lfarm-client
+               #:glop)
   :serial t
   :components ((:file "package")
                (:file "vuenix")
