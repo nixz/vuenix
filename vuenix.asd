@@ -11,10 +11,12 @@
                #:livesupport
                #:cepl.skitter.sdl2
                #:cepl.devil
+               #:sb-bsd-sockets
                #:lfarm-server
                #:lfarm-client)
   :serial t
   :components ((:file "package")
                (:file "vuenix")
-               (:file "render-image")))
+               (:file "render-image")
+               (:file "repl-server")))
 
